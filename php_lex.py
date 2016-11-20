@@ -14,6 +14,7 @@ tokens = (
     'IF',
     'WHILE',
     'FOR',
+    'STRING',
 
     # Symbolos
     'DOLAR',
@@ -130,6 +131,12 @@ def t_ID(t):
     return t
 
 
+def t_STRING(t):
+#expresion RE para reconocer los String
+    r'\"?(\w+ \ *\w*\d* \ *)\"?'
+    return t
+
+
 def t_PLUSPLUS(t):
     r'\+\+'
     return t
@@ -205,7 +212,7 @@ if __name__ == '__main__':
                 de varias lineas
             */
             <?php
-                $a = 20;
+                $a = 20 ;
                 echo "Hola";
                 // Esto es otro comentario
                 $a * 10;
