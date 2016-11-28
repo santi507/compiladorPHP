@@ -54,9 +54,7 @@ tokens = (
 # Reglas de Expresiones Regualres para token de Contexto simple
 
 t_MAS = r'\+'
-t_MASMAS = r'\+\+'
 t_MENOS = r'-'
-t_MENOSMENOS = r'\-\-'
 t_PUNTO = r'\.'
 t_MULTI = r'\*'
 t_DIVI = r'/'
@@ -137,8 +135,12 @@ def t_STRING(t):
     return t
 
 
-def t_PLUSPLUS(t):
+def t_MASMAS(t):
     r'\+\+'
+    return t
+
+def t_MENOSMENOS(t):
+    r'\-\-'
     return t
 
 
